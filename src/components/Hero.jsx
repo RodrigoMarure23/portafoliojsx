@@ -158,7 +158,8 @@ export function Hero() {
             <h1 className="text-6xl lg:text-4xl font-bold font-mono mb-4">
               <span className="text-white">Rodrigo</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+              {/* Degradado del Nombre: Cambiado de from-cyan-400 to-purple-500 a una mezcla de azules */}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">
                 Marure Sánchez
               </span>
             </h1>
@@ -171,7 +172,8 @@ export function Hero() {
             className="text-2xl lg:text-4xl text-slate-300 font-mono"
           >
             {displayText}
-            <span className="animate-pulse text-cyan-400">|</span>
+            {/* Cursor del efecto de escritura: Cambiado de text-cyan-400 a text-blue-400 */}
+            <span className="animate-pulse text-blue-400">|</span>
           </motion.div>
 
           <motion.p
@@ -179,15 +181,15 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
             className="
-                text-base        
-                sm:text-lg       
-                lg:text-xl      
-                text-slate-400 
-                max-w-[90%]      
-                sm:max-w-2xl    
-                mx-auto 
-                leading-relaxed
-            "
+        text-base    
+        sm:text-lg    
+        lg:text-xl   
+        text-slate-400 
+        max-w-[90%]   
+        sm:max-w-2xl  
+        mx-auto 
+        leading-relaxed
+      "
           >
             {t("hero.description")}
           </motion.p>
@@ -198,16 +200,22 @@ export function Hero() {
             transition={{ delay: 1.2, duration: 0.6 }}
             className="flex flex-wrap justify-center gap-4 pt-8"
           >
+            {/* Botón 1: Gradiente de Proyectos */}
             <button
               onClick={scrollToProjects}
-              className="group flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg hover:shadow-xl hover:shadow-cyan-500/50 transition-all font-mono"
+              className="group flex items-center gap-2 px-8 py-4 
+                          bg-gradient-to-r from-blue-500 to-indigo-600 
+                          text-white rounded-lg hover:shadow-xl hover:shadow-blue-500/50 transition-all font-mono"
             >
               {t("hero.viewProjects")}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={scrollToContact}
-              className="px-8 py-4 bg-transparent border-2 border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 hover:shadow-lg hover:shadow-cyan-500/30 transition-all font-mono"
+              className="px-8 py-4 bg-transparent 
+                          border-2 border-blue-500 
+                          text-blue-400 rounded-lg 
+                          hover:bg-blue-500/10 hover:shadow-lg hover:shadow-blue-500/30 transition-all font-mono"
             >
               {t("hero.getInTouch")}
             </button>
@@ -221,31 +229,33 @@ export function Hero() {
           >
             <a
               href="mailto:rodrigo142398@gmail.com"
-              className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
+              className="flex items-center gap-2 text-slate-400 hover:text-blue-400 transition-colors"
             >
               <Mail className="w-5 h-5" />
               <span className="font-mono text-sm">rodrigo142398@gmail.com</span>
             </a>
             <a
               href="tel:5647154515"
-              className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
+              className="flex items-center gap-2 text-slate-400 hover:text-blue-400 transition-colors"
             >
               <Phone className="w-5 h-5" />
               <span className="font-mono text-sm">564-715-4515</span>
             </a>
+            {/* Icono de LinkedIn: Actualizado a paleta de azules */}
             <a
               href="https://www.linkedin.com/in/rodrigo-marure-sanchez-8b0791230/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500 transition-all"
+              className="p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/20 hover:border-blue-500 transition-all"
             >
               <Linkedin className="w-5 h-5" />
             </a>
+            {/* Icono de Github: Actualizado a paleta de azules */}
             <a
               href="https://github.com/RodrigoMarure23"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500 transition-all"
+              className="p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/20 hover:border-blue-500 transition-all"
             >
               <Github className="w-5 h-5" />
             </a>

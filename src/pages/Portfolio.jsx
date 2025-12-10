@@ -7,7 +7,7 @@ import { Services } from "../components/Services";
 import { Contact } from "../components/Contact";
 export function Portfolio() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white ">
       <Navigation />
       <Hero />
       <Skills />

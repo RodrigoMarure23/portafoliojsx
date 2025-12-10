@@ -48,7 +48,7 @@ const translations = {
     },
 
     hero: {
-      tag: "<about />",
+      tag: "About",
       available: "Available for opportunities",
       name: "Rodrigo Marure Sánchez",
       title: "Full Stack Developer",
@@ -58,7 +58,7 @@ const translations = {
       getInTouch: "Get In Touch",
     },
     skills: {
-      tag: "Skills 🫳",
+      tag: "Skills",
       title: "Technical",
       titleHighlight: "Expertise",
       subtitle: "Full-stack capabilities with 3+ years of hands-on experience",
@@ -124,7 +124,7 @@ const translations = {
       },
     },
     projects: {
-      tag: "Projects 📚",
+      tag: "Projects",
       title: "Featured",
       titleHighlight: "Projects",
       subtitle:
@@ -188,7 +188,7 @@ const translations = {
       ],
     },
     experience: {
-      tag: "Experience 😎",
+      tag: "Experience",
       title: "Professional",
       titleHighlight: "Journey",
       subtitle: "Building scalable systems and delivering business value",
@@ -240,7 +240,7 @@ const translations = {
       },
     },
     services: {
-      tag: "<services />",
+      tag: "Services",
       title: "What I",
       titleHighlight: "Deliver",
       subtitle:
@@ -315,7 +315,7 @@ const translations = {
       ],
     },
     contact: {
-      tag: "Contact 📲📩",
+      tag: "Contact",
       title: "Let's Build",
       titleHighlight: "Together",
       subtitle:
@@ -344,7 +344,7 @@ const translations = {
       downloadCV: "Descargar CV",
     },
     hero: {
-      available: "🏢 Disponible para oportunidades",
+      available: "Disponible para oportunidades",
       name: "Rodrigo Marure Sánchez",
       title: "Desarrollador Full Stack | Frontend + Backend",
       description:
@@ -354,7 +354,7 @@ const translations = {
       getInTouch: "Contactar",
     },
     skills: {
-      tag: "Habilidades 🫳",
+      tag: "Habilidades",
       title: "Experiencia",
       titleHighlight: "Técnica",
       subtitle: "Capacidades full-stack con 3 años de experiencia práctica",
@@ -420,7 +420,7 @@ const translations = {
       },
     },
     projects: {
-      tag: "Proyectos 📚",
+      tag: "Proyectos",
       title: "Proyectos",
       titleHighlight: "Destacados",
       subtitle: "Soluciones del mundo real entregando impacto medible en Petco",
@@ -457,7 +457,6 @@ const translations = {
           impact: "Operaciones optimizadas para múltiples departamentos",
           category: "Herramientas de Negocio",
         },
-        // AÑADIDO: Plataforma de control de promociones
         {
           title: "Plataforma de Control de Promociones",
           description:
@@ -466,7 +465,7 @@ const translations = {
             "React.js",
             "Node.js",
             "APIs REST",
-            "PostgreSQL/MySQL", // Asumo un RDBMS por los reportes
+            "PostgreSQL/MySQL",
             "Reportes",
             "Emailing",
           ],
@@ -502,7 +501,7 @@ const translations = {
       ],
     },
     experience: {
-      tag: "Experiencia 😎",
+      tag: "Experiencia",
       title: "Trayectoria",
       titleHighlight: "Profesional",
       subtitle:
@@ -555,7 +554,7 @@ const translations = {
       },
     },
     services: {
-      tag: "Habilidades y ventajas 👾",
+      tag: "Habilidades y ventajas",
       title: "Lo Que",
       titleHighlight: "Ofrezco",
       subtitle:
@@ -629,7 +628,7 @@ const translations = {
       ],
     },
     contact: {
-      tag: "Contacto 📲📩",
+      tag: "Contacto",
       title: "Construyamos",
       titleHighlight: "Juntos",
       subtitle:
@@ -640,7 +639,7 @@ const translations = {
       linkedinSubtitle: "Conecta profesionalmente",
       githubTitle: "GitHub",
       githubSubtitle: "Ve mi código",
-      downloadCV: "Descargar CV Completo",
+      downloadCV: "Descargar CV",
       quickMessage: "Mensaje Rápido",
       namePlaceholder: "Tu Nombre",
       emailPlaceholder: "Tu Email",

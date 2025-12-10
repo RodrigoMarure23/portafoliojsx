@@ -184,8 +184,6 @@ export function Contact() {
                 </div>
               </div>
             </motion.a>
-
-            {/* LinkedIn Card */}
             <motion.a
               initial={{
                 opacity: 0,
@@ -225,8 +223,6 @@ export function Contact() {
                 </div>
               </div>
             </motion.a>
-
-            {/* GitHub Card */}
             <motion.a
               initial={{
                 opacity: 0,
@@ -268,7 +264,6 @@ export function Contact() {
             </motion.a>
           </div>
 
-          {/* Download CV Button */}
           <motion.div
             initial={{
               opacity: 0,
@@ -294,14 +289,12 @@ export function Contact() {
             <a
               href={cv}
               download
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/50 transition-all font-mono text-lg group"
+              className="inline-flex items-center gap-3 px-6 py-5 bg-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-blue-800/50 transition-all font-mono text-lg group"
             >
               <FileDown className="w-6 h-6 group-hover:animate-bounce" />
               {t("contact.downloadCV")}
             </a>
           </motion.div>
-
-          {/* Quick Message Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -347,7 +340,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all font-mono disabled:opacity-50"
+                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all font-mono disabled:opacity-50"
               >
                 <Send className="w-5 h-5" />
                 {loading ? t("contact.sending") : t("contact.sendButton")}
