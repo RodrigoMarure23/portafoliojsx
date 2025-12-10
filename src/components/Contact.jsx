@@ -20,7 +20,6 @@ export function Contact() {
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(null);
 
-  // Manejo de inputs
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -28,26 +27,6 @@ export function Contact() {
     });
   };
 
-  // Envío
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-
-  //   const params = {
-  //     from_name: form.name,
-  //     from_email: form.email,
-  //     message: form.message,
-  //     email: form.email,
-  //   };
-  //   emailjs
-  //     .send("service_8t4g04j", "template_rjo859o", params, "H36LCNDS_8nqb9K8k")
-  //     .then(() => {
-  //       setSent(true);
-  //       setForm({ name: "", email: "", message: "" });
-  //     })
-  //     .catch(() => setSent(false))
-  //     .finally(() => setLoading(false));
-  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -60,15 +39,12 @@ export function Contact() {
       from_name: form.name,
       from_email: form.email,
     };
-
-    // 1) Enviar correo al usuario
     const sendToUser = emailjs.send(
       "service_8t4g04j",
       "template_rjo859o",
       params,
       "H36LCNDS_8nqb9K8k"
     );
-    // 2) Enviarte correo a TI
     const notifyMe = emailjs.send(
       "service_8t4g04j",
       "template_9pqsh6d",
@@ -80,8 +56,6 @@ export function Contact() {
       },
       "H36LCNDS_8nqb9K8k"
     );
-
-    // Ejecutar ambos en paralelo
     Promise.all([sendToUser, notifyMe])
       .then(() => {
         setSent(true);
@@ -95,7 +69,6 @@ export function Contact() {
       id="contact"
       className="py-24 bg-[#0a0e27] relative overflow-hidden"
     >
-      {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
@@ -123,7 +96,6 @@ export function Contact() {
           }}
           className="max-w-4xl mx-auto"
         >
-          {/* aquiiiii */}
           <div className="text-center space-y-6 mb-16">
             <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 text-sm font-mono mb-4">
               {t("contact.tag")}
@@ -136,10 +108,7 @@ export function Contact() {
             </h2>
             <p className="text-xl text-slate-400">{t("contact.subtitle")}</p>
           </div>
-
-          {/* Contact Cards Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {/* Email Card */}
             <motion.a
               initial={{
                 opacity: 0,
@@ -178,7 +147,6 @@ export function Contact() {
               </div>
             </motion.a>
 
-            {/* Phone Card */}
             <motion.a
               initial={{
                 opacity: 0,

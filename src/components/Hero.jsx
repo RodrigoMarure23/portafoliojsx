@@ -21,9 +21,6 @@ import {
   SiGooglecloud,
 } from "react-icons/si";
 
-// -----------------------------------------------------------------
-// LÓGICA MÓVIL (Para la duración condicional del carrusel)
-// -----------------------------------------------------------------
 const MOBILE_BREAKPOINT = 760;
 
 const useIsMobile = () => {
@@ -31,11 +28,8 @@ const useIsMobile = () => {
 
   useEffect(() => {
     const checkIsMobile = () => {
-      // Esta validación debe ocurrir solo en el cliente
       if (typeof window !== "undefined") {
         setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
-        console.log("pantalla: ", window.innerWidth);
-        console.log("valor pantalla: ", window.innerWidth < MOBILE_BREAKPOINT);
       }
     };
 
@@ -46,19 +40,16 @@ const useIsMobile = () => {
 
   return isMobile;
 };
-// -----------------------------------------------------------------
 
 export function Hero() {
   const { t } = useLanguage();
-  const isMobile = useIsMobile(); // <-- Obtenemos el estado móvil
+  const isMobile = useIsMobile();
 
-  // Duración ajustada: 40s para móvil, 80s para escritorio para que sea legible
   const animationDuration = isMobile ? 4 : 15;
 
   const [displayText, setDisplayText] = useState("");
   const fullText = t("hero.title");
 
-  // Efecto de escritura
   useEffect(() => {
     setDisplayText("");
     let index = 0;
@@ -73,7 +64,6 @@ export function Hero() {
     return () => clearInterval(timer);
   }, [fullText]);
 
-  // Handlers de Scroll
   const scrollToProjects = () => {
     const element = document.getElementById("projects");
     if (element) {
@@ -91,7 +81,6 @@ export function Hero() {
     }
   };
 
-  // Definición del Stack de Tecnologías
   const stack = [
     { name: "React", icon: <FaReact className="text-4xl text-cyan-400" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-4xl text-green-400" /> },
@@ -136,7 +125,6 @@ export function Hero() {
     },
   ];
 
-  // Duplicamos el stack 4 veces para asegurar un carrusel muy largo y sin cortes visibles
   const animatedStack = [...stack, ...stack, ...stack, ...stack];
 
   return (
@@ -144,10 +132,8 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center bg-[#0a0e27] pt-4 pb-30 sm:pb-64 overflow-hidden"
     >
-      {/* Animated Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
-      {/* Gradient Orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
       <div
         className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
@@ -156,10 +142,8 @@ export function Hero() {
         }}
       ></div>
 
-      {/* 1. CONTENEDOR PRINCIPAL DE TEXTO Y BOTONES */}
       <div className="relative max-w-7xl mx-auto px-6 lg:px-4 z-10">
         <div className="text-center space-y-2">
-          {/* Nombre y Título */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -180,7 +164,6 @@ export function Hero() {
             </h1>
           </motion.div>
 
-          {/* Typing Effect Title */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -191,7 +174,6 @@ export function Hero() {
             <span className="animate-pulse text-cyan-400">|</span>
           </motion.div>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -210,7 +192,6 @@ export function Hero() {
             {t("hero.description")}
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -232,14 +213,12 @@ export function Hero() {
             </button>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 0.6 }}
             className="flex flex-wrap justify-center items-center gap-6 pt-8"
           >
-            {/* Links de contacto (Mail, Phone, Linkedin, Github) */}
             <a
               href="mailto:rodrigo142398@gmail.com"
               className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
@@ -263,7 +242,7 @@ export function Hero() {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/RodrigoMarure23"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500 transition-all"
@@ -274,7 +253,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* 2. CARRUSEL DE TECNOLOGÍA (Corregido para duración y loop) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -283,15 +261,12 @@ export function Hero() {
       >
         <motion.div
           className="flex gap-2"
-          // CAMBIO CLAVE: Animamos -50% para un loop completo con 4 duplicaciones
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            // DURACIÓN CONDICIONAL APLICADA AQUÍ
             duration: animationDuration,
             ease: "linear",
             repeat: Infinity,
           }}
-          // CAMBIO CLAVE: Forzamos el ancho a 400% para que quepan todos los duplicados
           style={{ width: "400%" }}
         >
           {animatedStack.map((tech, index) => (
@@ -299,7 +274,6 @@ export function Hero() {
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              // Retraso de aparición más rápido
               transition={{ delay: 0.3 + index * 0.05 }}
               className="flex flex-col min-w-[120px] items-center bg-slate-900/60 p-2 rounded-xl shadow-lg hover:shadow-cyan-500/20"
             >

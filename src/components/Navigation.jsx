@@ -14,20 +14,15 @@ export function Navigation() {
       });
 
       if (isOpen) {
-        // Solo aplica el retraso si el menú móvil está abierto
         setTimeout(() => {
           setIsOpen(false);
         }, 200);
       } else {
-        setIsOpen(false); // Si no está abierto (vista escritorio), ciérralo inmediatamente (aunque ya esté cerrado)
+        setIsOpen(false);
       }
     }
   };
   const navItems = [
-    // {
-    //   id: "about",
-    //   label: t("nav.about"),
-    // },
     {
       id: "skills",
       label: t("nav.skills"),

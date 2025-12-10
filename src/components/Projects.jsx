@@ -91,7 +91,6 @@ export function Projects() {
     margin: "-100px",
   });
   const { t } = useLanguage();
-  // Esta línea ahora cargará el array con el nuevo proyecto
   const projects = t("projects.items");
 
   return (
