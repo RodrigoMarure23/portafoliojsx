@@ -21,10 +21,44 @@ import {
   SiGooglecloud,
 } from "react-icons/si";
 
+// -----------------------------------------------------------------
+// LÓGICA MÓVIL (Para la duración condicional del carrusel)
+// -----------------------------------------------------------------
+const MOBILE_BREAKPOINT = 760;
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      // Esta validación debe ocurrir solo en el cliente
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+        console.log("pantalla: ", window.innerWidth);
+        console.log("valor pantalla: ", window.innerWidth < MOBILE_BREAKPOINT);
+      }
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  return isMobile;
+};
+// -----------------------------------------------------------------
+
 export function Hero() {
   const { t } = useLanguage();
+  const isMobile = useIsMobile(); // <-- Obtenemos el estado móvil
+
+  // Duración ajustada: 40s para móvil, 80s para escritorio para que sea legible
+  const animationDuration = isMobile ? 4 : 15;
+
   const [displayText, setDisplayText] = useState("");
   const fullText = t("hero.title");
+
+  // Efecto de escritura
   useEffect(() => {
     setDisplayText("");
     let index = 0;
@@ -38,6 +72,8 @@ export function Hero() {
     }, 100);
     return () => clearInterval(timer);
   }, [fullText]);
+
+  // Handlers de Scroll
   const scrollToProjects = () => {
     const element = document.getElementById("projects");
     if (element) {
@@ -54,6 +90,8 @@ export function Hero() {
       });
     }
   };
+
+  // Definición del Stack de Tecnologías
   const stack = [
     { name: "React", icon: <FaReact className="text-4xl text-cyan-400" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-4xl text-green-400" /> },
@@ -98,11 +136,13 @@ export function Hero() {
     },
   ];
 
+  // Duplicamos el stack 4 veces para asegurar un carrusel muy largo y sin cortes visibles
+  const animatedStack = [...stack, ...stack, ...stack, ...stack];
+
   return (
     <section
       id="hero"
-      // Quitamos 'overflow-hidden' de aquí para que el carrusel flotante no lo fuerce
-      className="relative min-h-screen flex flex-col items-center justify-center bg-[#0a0e27] pt-4 pb-30 sm:pb-64 overflow-hidden" // Añadimos padding inferior para el carrusel
+      className="relative min-h-screen flex flex-col items-center justify-center bg-[#0a0e27] pt-4 pb-30 sm:pb-64 overflow-hidden"
     >
       {/* Animated Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -116,7 +156,7 @@ export function Hero() {
         }}
       ></div>
 
-      {/* 1. CONTENEDOR PRINCIPAL DE TEXTO Y BOTONES (Borde Verde) */}
+      {/* 1. CONTENEDOR PRINCIPAL DE TEXTO Y BOTONES */}
       <div className="relative max-w-7xl mx-auto px-6 lg:px-4 z-10">
         <div className="text-center space-y-2">
           {/* Nombre y Título */}
@@ -233,32 +273,34 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-      {/* 2. CARRUSEL DE TECNOLOGÍA (El que se mueve y rompe el flujo) */}
+
+      {/* 2. CARRUSEL DE TECNOLOGÍA (Corregido para duración y loop) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9, duration: 0.6 }}
-        // Clases Clave: posicionado ABSOLUTO para no afectar el ancho del contenido principal
-        // w-full asegura que ocupe todo el ancho horizontal disponible de la sección
-        className=" pt-4 w-full **overflow-hidden relative bottom-20** z-0"
+        className=" pt-3 w-full overflow-hidden relative bottom-1 z-0 top-0 p"
       >
         <motion.div
-          // Añadimos px-6 aquí para que las tarjetas no toquen los bordes de la pantalla
-          className="flex gap-6 **px-6**"
-          animate={{ x: ["0%", "-100%"] }}
+          className="flex gap-2"
+          // CAMBIO CLAVE: Animamos -50% para un loop completo con 4 duplicaciones
+          animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 11,
+            // DURACIÓN CONDICIONAL APLICADA AQUÍ
+            duration: animationDuration,
             ease: "linear",
             repeat: Infinity,
           }}
+          // CAMBIO CLAVE: Forzamos el ancho a 400% para que quepan todos los duplicados
+          style={{ width: "400%" }}
         >
-          {[...stack, ...stack].map((tech, index) => (
+          {animatedStack.map((tech, index) => (
             <motion.div
               key={index}
-              // style={{ border: "solid red" }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.9 + index * 0.09 }}
+              // Retraso de aparición más rápido
+              transition={{ delay: 0.3 + index * 0.05 }}
               className="flex flex-col min-w-[120px] items-center bg-slate-900/60 p-2 rounded-xl shadow-lg hover:shadow-cyan-500/20"
             >
               {tech.icon}
@@ -269,21 +311,6 @@ export function Hero() {
           ))}
         </motion.div>
       </motion.div>
-      {/* Scroll Indicator */}
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10" // Asegurar que esté sobre el carrusel
-      >
-        <div className="w-6 h-10 border-2 border-cyan-500/50 rounded-full flex justify-center pt-2">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-cyan-400 rounded-full"
-          ></motion.div>
-        </div>
-      </motion.div> */}
     </section>
   );
 }

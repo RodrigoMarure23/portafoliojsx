@@ -12,7 +12,15 @@ export function Navigation() {
       element.scrollIntoView({
         behavior: "smooth",
       });
-      setIsOpen(false);
+
+      if (isOpen) {
+        // Solo aplica el retraso si el menú móvil está abierto
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 200);
+      } else {
+        setIsOpen(false); // Si no está abierto (vista escritorio), ciérralo inmediatamente (aunque ya esté cerrado)
+      }
     }
   };
   const navItems = [
