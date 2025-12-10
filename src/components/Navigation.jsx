@@ -16,7 +16,7 @@ export function Navigation() {
       if (isOpen) {
         setTimeout(() => {
           setIsOpen(false);
-        }, 200);
+        }, 1500);
       } else {
         setIsOpen(false);
       }
