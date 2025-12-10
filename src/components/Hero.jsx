@@ -125,7 +125,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 text-sm font-mono mb-6">
+            <div
+              style={{ marginTop: "4rem" }}
+              className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 text-sm font-mono mb-6"
+            >
               {t("hero.available")}
             </div>
             <h1 className="text-6xl lg:text-4xl font-bold font-mono mb-4">
@@ -244,7 +247,7 @@ export function Hero() {
           className="flex gap-6 **px-6**"
           animate={{ x: ["0%", "-100%"] }}
           transition={{
-            duration: 15,
+            duration: 11,
             ease: "linear",
             repeat: Infinity,
           }}
@@ -252,9 +255,10 @@ export function Hero() {
           {[...stack, ...stack].map((tech, index) => (
             <motion.div
               key={index}
+              // style={{ border: "solid red" }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.9 + index * 0.05 }}
+              transition={{ delay: 0.9 + index * 0.09 }}
               className="flex flex-col min-w-[120px] items-center bg-slate-900/60 p-2 rounded-xl shadow-lg hover:shadow-cyan-500/20"
             >
               {tech.icon}

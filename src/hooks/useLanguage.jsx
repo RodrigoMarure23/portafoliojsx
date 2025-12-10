@@ -357,8 +357,7 @@ const translations = {
       tag: "Habilidades 🫳",
       title: "Experiencia",
       titleHighlight: "Técnica",
-      subtitle:
-        "Capacidades full-stack con más de 3 años de experiencia práctica",
+      subtitle: "Capacidades full-stack con 3 años de experiencia práctica",
       categories: {
         frontend: {
           title: "Frontend",
@@ -415,7 +414,7 @@ const translations = {
             postman: "Postman",
             e2e: "Testing End-to-End",
             debug: "Depuración",
-            jira: "Jira",
+            jira: "N8N",
           },
         },
       },
@@ -620,10 +619,9 @@ const translations = {
         {
           title: "Desarrollo Ágil",
           description:
-            "Experiencia completa en SDLC con metodologías Ágiles (Scrum/Kanban). Desde análisis de requisitos hasta despliegue, entregando valor iterativo con integración y testing continuo.",
+            "Experiencia completa en SDLC con metodologías Ágiles (Scrum). Desde análisis de requisitos hasta despliegue, creacion de documentación, capacitaciones para uso de las plataformas web y contando con  integración y testing continuo.",
           highlights: [
-            "Scrum & Kanban",
-            "Gestión Jira",
+            "Scrum Agile",
             "Revisiones de Código",
             "Aseguramiento de Calidad",
           ],
