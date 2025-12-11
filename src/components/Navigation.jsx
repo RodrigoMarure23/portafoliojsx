@@ -37,6 +37,10 @@ export function Navigation() {
       label: t("nav.experience"),
     },
     {
+      id: "services",
+      label: t("nav.services"),
+    },
+    {
       id: "contact",
       label: t("nav.contact"),
     },

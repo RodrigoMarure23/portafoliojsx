@@ -43,6 +43,7 @@ const translations = {
       skills: "Skills",
       projects: "Projects",
       experience: "Experience",
+      services: "Solutions",
       contact: "Contact",
       downloadCV: "Download CV",
     },
@@ -340,6 +341,7 @@ const translations = {
       skills: "Habilidades",
       projects: "Proyectos",
       experience: "Experiencia",
+      services: "Soluciones",
       contact: "Contacto",
       downloadCV: "Descargar CV",
     },
@@ -484,7 +486,7 @@ const translations = {
         {
           title: "Intranet Modular",
           description:
-            "Canal de comunicación interna centralizando noticias, reconocimientos y acceso a herramientas corporativas (SAP, vacaciones, contratos, desarrollos internos, organigramas, calendarios). Arquitectura escalable de microservicios con CI/CD continuo.",
+            "Canal de comunicación interna centralizando noticias, reconocimientos y acceso a herramientas corporativas (SAP, vacaciones, contratos, desarrollos internos, organigramas, calendarios, cumpleaños, avisos de diversas areas, acceso a las apps corporativas). Arquitectura escalable de microservicios con CI/CD continuo.",
           tech: ["React.js", "Node.js", "Docker", "Microservicios"],
           impact: "Hub de comunicación unificado para toda la organización",
           category: "Plataforma Interna",
@@ -563,23 +565,27 @@ const translations = {
         {
           title: "Desarrollo Web Personalizado",
           description:
-            "Desarrollo end-to-end de aplicaciones web robustas usando React, Node.js y JavaScript moderno. Desde el concepto hasta el despliegue en producción con enfoque en escalabilidad y rendimiento.",
+            "Desarrollo end-to-end de aplicaciones web robustas usando React, Angular, Vite, Node.js, JavaScript y TypeScript moderno. Desde el concepto hasta el despliegue en producción, capacitación de usuarios y con enfoque en escalabilidad y rendimiento. Metodología de Desarrollo Avanzada: Incorporación de herramientas de Inteligencia Artificial (IA) a lo largo del ciclo de vida para la generación asistida, code review y búsqueda de la solución más eficiente y con el mejor resultado posible.",
           highlights: [
-            "React.js & Redux",
-            "APIs Node.js",
-            "Diseño Responsivo",
-            "Optimización de Rendimiento",
+            "Desarrollo Full Stack (React, Angular, Node.js, APIS, Microservicios, )",
+            "TypeScript y JavaScript Moderno",
+            "Arquitectura de Microservicios y APIs",
+            "Optimización de Rendimiento y Escalabilidad",
+            "Desarrollo End-to-End (Concepto a Despliegue)",
+            "Metodología con IA Aplicada ",
+            "CI/CD (Integración Continua / Entrega Continua)",
           ],
         },
         {
           title: "Integración de Sistemas",
           description:
-            "Integración perfecta con plataformas empresariales incluyendo SAP, Emarsys, Teamwork y Google Analytics. Experto en conectar sistemas dispares y automatizar flujos de datos.",
+            "Integración experta con plataformas empresariales críticas como SAP, Emarsys, Teamwork, CDP y Google Analytics. Conocimientos sólidos en la conexión de sistemas dispares para la automatización integral de procesos operativos, flujos transaccionales, Marketing Automation (envío de correos, promociones, cupones, recordatorios) y la generación automatizada de documentos y reportes.",
           highlights: [
-            "Integración SAP",
-            "APIs de Terceros",
-            "Sincronización de Datos",
-            "Actualizaciones en Tiempo Real",
+            "Integraciones con Plataformas Empresariales (SAP, CDP, GA)",
+            "Automatización de Flujos Operativos y Transaccionales",
+            "Diseño e Implementación de Marketing Automation",
+            "Conexión de Sistemas Dispares y Data Mapping Avanzado",
+            "Digitalización: Generación Automatizada de Reportes y Documentación",
           ],
         },
         {
