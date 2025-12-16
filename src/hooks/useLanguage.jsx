@@ -572,6 +572,19 @@ const translations = {
             "Apliqué principios de diseño funcional, seguridad de datos y eficiencia operativa",
           ],
         },
+        {
+          role: "Desarrollador Web Freelance",
+          company: "Proyectos Independientes",
+          period: "2021 - Actualidad",
+          type: "Freelance",
+          achievements: [
+            "Desarrollo continuo de soluciones web y automatizaciones para pequeños negocios desde el inicio de mi formación en programación",
+            "Diseñé y construí tiendas en línea y plataformas de gestión con control de usuarios, roles y ventas",
+            "Implementé automatizaciones para el procesamiento de archivos Excel y generación de reportes, reduciendo tareas manuales y errores operativos",
+            "Apliqué JavaScript, TypeScript, React y Node.js para digitalizar y optimizar procesos de negocio",
+            "Complementé la experiencia profesional cursando la Ingeniería en Computación (UNAM) y un Máster Full Stack en DEV.F, fortaleciendo buenas prácticas y bases técnicas sólidas",
+          ],
+        },
       ],
       education: {
         degree: "Ingeniería en Computación",
@@ -579,6 +592,7 @@ const translations = {
         period: "Abr 2019 - Oct 2023",
         location: "Ciudad de México",
       },
+
       languages: {
         spanish: {
           name: "Español",

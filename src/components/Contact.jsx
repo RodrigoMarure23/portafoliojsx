@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import emailjs from "@emailjs/browser";
-import cv from "../cv/cvActual.pdf";
+import cv from "../cv/cvRodrigoMarure2.pdf";
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, {

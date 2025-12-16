@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaReact } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../hooks/useLanguage";
-import cv from "../cv/cvActual.pdf";
+import cv from "../cv/cvRodrigoMarure2.pdf";
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
