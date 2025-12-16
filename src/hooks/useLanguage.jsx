@@ -54,7 +54,7 @@ const translations = {
       name: "Rodrigo Marure Sánchez",
       title: "Full Stack Developer",
       description:
-        "Specialized in designing, developing, and deploying robust web solutions using React, Node.js, and Microservices architecture. 3+ years building scalable systems and automating business processes.",
+        "Specialized in designing, developing, and deploying robust web solutions using React, Node.js, and Microservices architecture. 4 years building scalable systems and automating business processes.",
       viewProjects: "View Projects",
       getInTouch: "Get In Touch",
     },
@@ -62,7 +62,7 @@ const translations = {
       tag: "Skills",
       title: "Technical",
       titleHighlight: "Expertise",
-      subtitle: "Full-stack capabilities with 3+ years of hands-on experience",
+      subtitle: "Full-stack capabilities with 4 years of hands-on experience",
       categories: {
         frontend: {
           title: "Frontend",
@@ -129,7 +129,7 @@ const translations = {
       title: "Featured",
       titleHighlight: "Projects",
       subtitle:
-        "Real-world solutions delivering measurable business impact at Petco",
+        "Real-world solutions delivering measurable business impact at Petco and as a Freelance Developer",
       items: [
         {
           title: "Petcozoo - Inventory Management",
@@ -185,6 +185,23 @@ const translations = {
           tech: ["Node.js", "SAP", "Teamwork", "Emarsys", "Google Analytics"],
           impact: "Seamless data flow across enterprise systems",
           category: "Integration",
+        },
+        {
+          title: "Freelance Web Development & Automation",
+          description:
+            "Ongoing development of web solutions and automations for small businesses, including e-commerce stores and management platforms with user, role, and sales control. Implementation of automations for Excel file processing and report generation, digitizing manual workflows and optimizing operational efficiency. Experience built in parallel with academic training in Computer Engineering (UNAM) and a one-year Full Stack Master’s program at DEV.F, applying modern development standards and best practices.",
+          tech: [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Node.js",
+            "Automation",
+            "Excel",
+            "REST APIs",
+          ],
+          impact:
+            "Reduced manual tasks and significantly improved operational efficiency for small businesses",
+          category: "Freelance / Consulting",
         },
       ],
     },
@@ -350,7 +367,7 @@ const translations = {
       name: "Rodrigo Marure Sánchez",
       title: "Desarrollador Full Stack | Frontend + Backend",
       description:
-        "Especializado en el diseño, desarrollo y despliegue de soluciones web robustas utilizando React, Node.js y arquitectura de Microservicios. Más de 3 años construyendo sistemas escalables y automatizando procesos de negocio.",
+        "Especializado en el diseño, desarrollo y despliegue de soluciones web robustas utilizando React, Node.js y arquitectura de Microservicios. Con 4 años construyendo sistemas escalables y automatizando procesos de negocio.",
 
       viewProjects: "Ver Proyectos",
       getInTouch: "Contactar",
@@ -359,7 +376,7 @@ const translations = {
       tag: "Habilidades",
       title: "Experiencia",
       titleHighlight: "Técnica",
-      subtitle: "Capacidades full-stack con 3 años de experiencia práctica",
+      subtitle: "Capacidades full-stack con 4 años de experiencia práctica",
       categories: {
         frontend: {
           title: "Frontend",
@@ -425,7 +442,8 @@ const translations = {
       tag: "Proyectos",
       title: "Proyectos",
       titleHighlight: "Destacados",
-      subtitle: "Soluciones del mundo real entregando impacto medible en Petco",
+      subtitle:
+        "Soluciones del mundo real entregando impacto medible en Petco y como Freelance",
       items: [
         {
           title: "Petcozoo - Gestión de Inventarios",
@@ -499,6 +517,23 @@ const translations = {
           impact:
             "Flujo de datos sin interrupciones entre sistemas empresariales",
           category: "Integración",
+        },
+        {
+          title: "Desarrollo Freelance Web y Automatizaciones",
+          description:
+            "Desarrollo continuo de soluciones web y automatizaciones para pequeños negocios, incluyendo tiendas en línea y plataformas de gestión con control de usuarios, roles y ventas. Implementación de automatizaciones para procesamiento de archivos Excel y generación de reportes, digitalizando procesos manuales y optimizando la operación. Experiencia construida en paralelo a la formación académica en Ingeniería en Computación (UNAM) y un Máster Full Stack en DEV.F, aplicando buenas prácticas y estándares modernos de desarrollo.",
+          tech: [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Node.js",
+            "Automatización",
+            "Excel",
+            "APIs REST",
+          ],
+          impact:
+            "Reducción de tareas manuales y mejora significativa en la eficiencia operativa de pequeños negocios",
+          category: "Freelance / Consultoría",
         },
       ],
     },
