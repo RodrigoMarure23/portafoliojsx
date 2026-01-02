@@ -54,7 +54,7 @@ const translations = {
       name: "Rodrigo Marure Sánchez",
       title: "Full Stack Developer",
       description:
-        "Specialized in designing, developing, and deploying robust web solutions using React, Node.js, and Microservices architecture. 4 years building scalable systems and automating business processes.",
+        "Specialized in designing, developing, and deploying robust web solutions using React, Node.js, and Microservices architecture. 3 years building scalable systems and automating business processes.",
       viewProjects: "View Projects",
       getInTouch: "Get In Touch",
     },
@@ -62,14 +62,15 @@ const translations = {
       tag: "Skills",
       title: "Technical",
       titleHighlight: "Expertise",
-      subtitle: "Full-stack capabilities with 4 years of hands-on experience",
+      subtitle: "Full-stack capabilities with 3 years of hands-on experience",
       categories: {
         frontend: {
           title: "Frontend",
           skills: {
-            react: "React.js",
+            react: "React.js / Vue.js / Next.js",
             redux: "Redux",
             javascript: "JavaScript",
+            context: "React context/ redux",
             html: "HTML5/CSS3",
             ui: "UI/UX Design",
           },
@@ -367,7 +368,7 @@ const translations = {
       name: "Rodrigo Marure Sánchez",
       title: "Desarrollador Full Stack | Frontend + Backend",
       description:
-        "Especializado en el diseño, desarrollo y despliegue de soluciones web robustas utilizando React, Node.js y arquitectura de Microservicios. Con 4 años construyendo sistemas escalables y automatizando procesos de negocio.",
+        "Especializado en el diseño, desarrollo y despliegue de soluciones web robustas utilizando React, Node.js y arquitectura de Microservicios. Con 3 años construyendo sistemas escalables y automatizando procesos de negocio.",
 
       viewProjects: "Ver Proyectos",
       getInTouch: "Contactar",
@@ -376,16 +377,17 @@ const translations = {
       tag: "Habilidades",
       title: "Experiencia",
       titleHighlight: "Técnica",
-      subtitle: "Capacidades full-stack con 4 años de experiencia práctica",
+      subtitle: "Capacidades full-stack con 3 años de experiencia práctica",
       categories: {
         frontend: {
           title: "Frontend",
           skills: {
-            react: "React.js",
+            react: "React.js / Vue.js / Next.js",
             redux: "Redux",
             javascript: "JavaScript",
+            context: "React context/ redux",
             html: "HTML5/CSS3",
-            ui: "Diseño UI/UX",
+            ui: "UI/UX Design",
           },
         },
         backend: {
@@ -575,7 +577,7 @@ const translations = {
         {
           role: "Desarrollador Web Freelance",
           company: "Proyectos Independientes",
-          period: "2021 - Actualidad",
+          period: "2023 - Actualidad",
           type: "Freelance",
           achievements: [
             "Desarrollo continuo de soluciones web y automatizaciones para pequeños negocios desde el inicio de mi formación en programación",
