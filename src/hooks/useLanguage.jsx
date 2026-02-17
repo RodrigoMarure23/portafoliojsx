@@ -368,7 +368,7 @@ const translations = {
       name: "Rodrigo Marure Sánchez",
       title: "Desarrollador Full Stack | Frontend + Backend",
       description:
-        "Especializado en el diseño, desarrollo y despliegue de soluciones web robustas utilizando React, Node.js y arquitectura de Microservicios. Con 3 años construyendo sistemas escalables y automatizando procesos de negocio.",
+        "Especializado en el diseño, desarrollo y despliegue de soluciones web robustas utilizando React, Node.js y arquitectura de Microservicios. Con 2 años construyendo sistemas escalables y automatizando procesos de negocio.",
 
       viewProjects: "Ver Proyectos",
       getInTouch: "Contactar",
