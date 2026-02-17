@@ -54,7 +54,7 @@ const translations = {
       name: "Rodrigo Marure Sánchez",
       title: "Full Stack Developer",
       description:
-        "Specialized in designing, developing, and deploying robust web solutions using React, Node.js, and Microservices architecture. 3 years building scalable systems and automating business processes.",
+        "Specialized in designing, developing, and deploying robust web solutions using React, Node.js, and Microservices architecture. 2 years building scalable systems and automating business processes.",
       viewProjects: "View Projects",
       getInTouch: "Get In Touch",
     },
@@ -62,7 +62,7 @@ const translations = {
       tag: "Skills",
       title: "Technical",
       titleHighlight: "Expertise",
-      subtitle: "Full-stack capabilities with 3 years of hands-on experience",
+      subtitle: "Full-stack capabilities with 2 years of hands-on experience",
       categories: {
         frontend: {
           title: "Frontend",
@@ -187,23 +187,23 @@ const translations = {
           impact: "Seamless data flow across enterprise systems",
           category: "Integration",
         },
-        {
-          title: "Freelance Web Development & Automation",
-          description:
-            "Ongoing development of web solutions and automations for small businesses, including e-commerce stores and management platforms with user, role, and sales control. Implementation of automations for Excel file processing and report generation, digitizing manual workflows and optimizing operational efficiency. Experience built in parallel with academic training in Computer Engineering (UNAM) and a one-year Full Stack Master’s program at DEV.F, applying modern development standards and best practices.",
-          tech: [
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "Node.js",
-            "Automation",
-            "Excel",
-            "REST APIs",
-          ],
-          impact:
-            "Reduced manual tasks and significantly improved operational efficiency for small businesses",
-          category: "Freelance / Consulting",
-        },
+        // {
+        //   title: "Freelance Web Development & Automation",
+        //   description:
+        //     "Ongoing development of web solutions and automations for small businesses, including e-commerce stores and management platforms with user, role, and sales control. Implementation of automations for Excel file processing and report generation, digitizing manual workflows and optimizing operational efficiency. Experience built in parallel with academic training in Computer Engineering (UNAM) and a one-year Full Stack Master’s program at DEV.F, applying modern development standards and best practices.",
+        //   tech: [
+        //     "JavaScript",
+        //     "TypeScript",
+        //     "React",
+        //     "Node.js",
+        //     "Automation",
+        //     "Excel",
+        //     "REST APIs",
+        //   ],
+        //   impact:
+        //     "Reduced manual tasks and significantly improved operational efficiency for small businesses",
+        //   category: "Freelance / Consulting",
+        // },
       ],
     },
     experience: {
@@ -377,7 +377,7 @@ const translations = {
       tag: "Habilidades",
       title: "Experiencia",
       titleHighlight: "Técnica",
-      subtitle: "Capacidades full-stack con 3 años de experiencia práctica",
+      subtitle: "Capacidades full-stack con 2 años de experiencia práctica",
       categories: {
         frontend: {
           title: "Frontend",
@@ -520,23 +520,23 @@ const translations = {
             "Flujo de datos sin interrupciones entre sistemas empresariales",
           category: "Integración",
         },
-        {
-          title: "Desarrollo Freelance Web y Automatizaciones",
-          description:
-            "Desarrollo continuo de soluciones web y automatizaciones para pequeños negocios, incluyendo tiendas en línea y plataformas de gestión con control de usuarios, roles y ventas. Implementación de automatizaciones para procesamiento de archivos Excel y generación de reportes, digitalizando procesos manuales y optimizando la operación. Experiencia construida en paralelo a la formación académica en Ingeniería en Computación (UNAM) y un Máster Full Stack en DEV.F, aplicando buenas prácticas y estándares modernos de desarrollo.",
-          tech: [
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "Node.js",
-            "Automatización",
-            "Excel",
-            "APIs REST",
-          ],
-          impact:
-            "Reducción de tareas manuales y mejora significativa en la eficiencia operativa de pequeños negocios",
-          category: "Freelance / Consultoría",
-        },
+        // {
+        //   title: "Desarrollo Freelance Web y Automatizaciones",
+        //   description:
+        //     "Desarrollo continuo de soluciones web y automatizaciones para pequeños negocios, incluyendo tiendas en línea y plataformas de gestión con control de usuarios, roles y ventas. Implementación de automatizaciones para procesamiento de archivos Excel y generación de reportes, digitalizando procesos manuales y optimizando la operación. Experiencia construida en paralelo a la formación académica en Ingeniería en Computación (UNAM) y un Máster Full Stack en DEV.F, aplicando buenas prácticas y estándares modernos de desarrollo.",
+        //   tech: [
+        //     "JavaScript",
+        //     "TypeScript",
+        //     "React",
+        //     "Node.js",
+        //     "Automatización",
+        //     "Excel",
+        //     "APIs REST",
+        //   ],
+        //   impact:
+        //     "Reducción de tareas manuales y mejora significativa en la eficiencia operativa de pequeños negocios",
+        //   category: "Freelance / Consultoría",
+        // },
       ],
     },
     experience: {
@@ -574,19 +574,19 @@ const translations = {
             "Apliqué principios de diseño funcional, seguridad de datos y eficiencia operativa",
           ],
         },
-        {
-          role: "Desarrollador Web Freelance",
-          company: "Proyectos Independientes",
-          period: "2023 - Actualidad",
-          type: "Freelance",
-          achievements: [
-            "Desarrollo continuo de soluciones web y automatizaciones para pequeños negocios desde el inicio de mi formación en programación",
-            "Diseñé y construí tiendas en línea y plataformas de gestión con control de usuarios, roles y ventas",
-            "Implementé automatizaciones para el procesamiento de archivos Excel y generación de reportes, reduciendo tareas manuales y errores operativos",
-            "Apliqué JavaScript, TypeScript, React y Node.js para digitalizar y optimizar procesos de negocio",
-            "Complementé la experiencia profesional cursando la Ingeniería en Computación (UNAM) y un Máster Full Stack en DEV.F, fortaleciendo buenas prácticas y bases técnicas sólidas",
-          ],
-        },
+        // {
+        //   role: "Desarrollador Web Freelance",
+        //   company: "Proyectos Independientes",
+        //   period: "2025 - Actualidad",
+        //   type: "Freelance",
+        //   achievements: [
+        //     "Desarrollo continuo de soluciones web y automatizaciones para pequeños negocios desde el inicio de mi formación en programación",
+        //     "Diseñé y construí tiendas en línea y plataformas de gestión con control de usuarios, roles y ventas",
+        //     "Implementé automatizaciones para el procesamiento de archivos Excel y generación de reportes, reduciendo tareas manuales y errores operativos",
+        //     "Apliqué JavaScript, TypeScript, React y Node.js para digitalizar y optimizar procesos de negocio",
+        //     "Complementé la experiencia profesional cursando la Ingeniería en Computación (UNAM) y un Máster Full Stack en DEV.F, fortaleciendo buenas prácticas y bases técnicas sólidas",
+        //   ],
+        // },
       ],
       education: {
         degree: "Ingeniería en Computación",
